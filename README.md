@@ -50,7 +50,7 @@ After importing UIFont+RSCustom.h in the necessary file, you can assign a custom
 
      self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
 
-Unfortunately, this font will not automatically update if the user updates their preferred text size after you have already set the font. You need to observe for UIContentSizeCategoryDidChangeNotification in case this unlikely event occurs.
+Unfortunately, this font will not automatically update if the user changes their preferred text size after you set the font. You need to observe for UIContentSizeCategoryDidChangeNotification in case this unlikely event occurs.
 
 in viewDidLoad/WillAppear/DidAppear add
 
