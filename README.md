@@ -18,17 +18,17 @@ Installation
 #### Cocoapods
 #### Git Submodule
 #### Manual
- Just drag UIFont+RSCustom.h/.m and customFont.plist to your project.
+ Clone this repository and drag UIFont+RSCustom.h/.m and customFont.plist to your project.
 
 ---------
 Usage
 ---------
 
 #### Adding Custom Fonts
-Adding a Custom Font is a easy process but can be hard to diagnose if proper care is not taken.
+Adding a Custom Font is a easy process but can be hard to diagnose if improperly done.
 ##### Add Fonts to Target
 
-Drag your ttf font file to the project and make sure you add the font to the target
+Drag your font file to the project and make sure you add the font to the target
 ![Check Target Membership](/images/target_membership.png)
 
 ##### Add Fonts to info.plist
@@ -40,16 +40,17 @@ Drag your ttf font file to the project and make sure you add the font to the tar
 
 #### Defining Custom fonts in pList
 
-To define which fonts you to use for which category you can specify them in the pList called customFonts
+You can specify which fonts you want to use for which category in a pList called customFonts. Below is a example.
 
 ![Alt text](/images/plist.png)
 
 #### Code
 
-You can assign a custom font to any font property like this.
+You can assign a custom font to any font property like this:
+
      self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
 
-Unfortunately, this font will not automatically update if the user updates their preferred text size after your view has already loaded. Thus, you can listen for UIContentSizeCategoryDidChangeNotification in case this unlikely event occurs.
+Unfortunately, this font will not automatically update if the user updates their preferred text size after you have already set the font. Thus, you can listen for UIContentSizeCategoryDidChangeNotification in case this unlikely event occurs.
 
 in viewDidLoad/WillAppear/DidAppear add
 
