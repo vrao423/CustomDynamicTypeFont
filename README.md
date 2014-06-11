@@ -12,7 +12,7 @@ Requirements
 ----------
 This will only work for iOS 7. I will test with iOS 8 as its release date approaches.
 
-----------
+
 Installation
 ----------
 #### Cocoapods
@@ -20,7 +20,7 @@ Installation
 #### Manual
  Clone this repository and drag UIFont+RSCustom.h/.m and customFont.plist to your project.
 
----------
+
 Usage
 ---------
 
@@ -68,17 +68,17 @@ Then implement sizeChanged:
        [self.labelBody invalidateIntrinsicContentSize];
     }
 
----------
+
 Feature Requests and Bug Fixes
 ---------
 Please open an issue for bugs and feature requests. I would prefer to to have a discussion about the bug/feature request and then we can discuss who will submit the pull request for the issue.
 
---
+
 iOS 8 and XCode 6
 --
 I will be watching out for updates to XCode 6 and Interface Builder to render the fonts at the right time.
 
----------
+
 License
 ---------
 MIT License
