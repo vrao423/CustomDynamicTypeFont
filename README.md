@@ -1,16 +1,16 @@
 Custom Dynamic Type Font
 =====================
 
-While implementing dynamic type for a project and I created this small library to implement custom dynamic type fonts. I think Apple overlooked this easy but important functionality with Dynamic Type. 
+One of the major shortcommings of Dynamic Type in iOS is the inability to use custom fonts. 
 
-And with the announcement for auto resizing cells in iOS 8, Dynamic Type will become even more important. 
+To implement custom dynamic type for a project I wrote this code to overcome that shortcoming. 
 
-Download the app that currently uses this library in the store here: www.appstore.com/QEDC
+The app that currently uses this code in the store is availible here: www.appstore.com/QEDC.
 
 ----------
 Requirements
 ----------
-This will only work for iOS 7. I will begin testing with iOS 8 soon.
+This will only work for iOS 7. I will test with iOS 8 as its release date approaches.
 
 ----------
 Installation
@@ -25,7 +25,7 @@ Usage
 ---------
 
 #### Adding Custom Fonts
-Adding a Custom Font is a easy process but can be hard to diagnose if improperly done.
+Adding a Custom Font is a easy process but can be hard to diagnose if incorrectly attempted.
 ##### Add Fonts to Target
 
 Drag your font file to the project and make sure you add the font to the target
@@ -46,11 +46,11 @@ You can specify which fonts you want to use for which category in a pList called
 
 #### Code
 
-You can assign a custom font to any font property like this:
+After importing UIFont+RSCustom.h in the necessary file, you can assign a custom font to any font property like this:
 
      self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
 
-Unfortunately, this font will not automatically update if the user updates their preferred text size after you have already set the font. Thus, you can listen for UIContentSizeCategoryDidChangeNotification in case this unlikely event occurs.
+Unfortunately, this font will not automatically update if the user updates their preferred text size after you have already set the font. You need to observe for UIContentSizeCategoryDidChangeNotification in case this unlikely event occurs.
 
 in viewDidLoad/WillAppear/DidAppear add
 
