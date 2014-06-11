@@ -1,6 +1,8 @@
 Custom Dynamic Type Font
 =====================
 
+While implementing dynamic type for a project and created this small library to implement custom dynamic type fonts. With the announcement for auto resizing cells, Dynamic Type will become even more important. Download the app that currently uses this library here: www.appstore.com/QEDC
+
 ----------
 Requirements
 ----------
@@ -39,9 +41,10 @@ To define which fonts you to use for which category you can specify them in the 
 
 #### Code
 
+You can assign a custom font to any font property like this.
     self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
 
-Additionally, you can listen for UIContentSizeCategoryDidChangeNotification in case the user changes the setting while using your app.
+Unfortunately, this font will not automatically update if the user updates their preferred text size after your view has already loaded. Thus, you can listen for UIContentSizeCategoryDidChangeNotification in case this unlikely event occurs.
 
 in viewDidLoad/WillAppear/DidAppear add
 
@@ -65,8 +68,9 @@ Feature Requests and Bug Fixes
 Please open an issue for bugs and feature requests. I would prefer to to have a discussion about the bug/feature request and then we can discuss who will submit the pull request for the issue.
 
 --
-iOS 8
+iOS 8 and XCode 6
 --
+I will be watching out for updates to XCode 6 and Interface Builder to render the fonts at the right time.
 
 ---------
 License
