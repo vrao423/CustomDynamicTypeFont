@@ -21,17 +21,17 @@ Usage
 Adding a Custom Font is a easy process but can be hard to diagnose if proper care is not taken.
 ### Add Fonts to Target
 ## Drag your ttf font file to the project, make sure you add the font to the target
-![Check Target Membership](target_membership.png)
+![Check Target Membership](/images/target_membership.png)
 
 ### Add Font to info.plist
-![Alt text](Info_plist.png)
+![Alt text](/images/Info_plist.png)
 
 
 #### Defining Custom fonts in pList
 
 To define which fonts you to use for which category you can specify them in the pList called customFonts
 
-![Alt text](plist.png)
+![Alt text](/images/plist.png)
 
 #### Code
 
