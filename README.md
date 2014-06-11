@@ -3,7 +3,7 @@ Custom Dynamic Type Font
 
 One of the major shortcommings of Dynamic Type in iOS is the inability to use custom fonts. 
 
-To implement custom dynamic type for a project I wrote this code to overcome that shortcoming. 
+To implement custom dynamic type for a project I wrote this code. 
 
 The app that currently uses this code in the store is availible here: www.appstore.com/QEDC.
 
