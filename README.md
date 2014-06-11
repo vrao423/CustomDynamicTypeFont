@@ -46,7 +46,7 @@ You can specify which fonts you want to use for which category in a pList called
 
 #### Code
 
-After importing UIFont+RSCustom.h in the necessary file, you can assign a custom font to any font property like this:
+After importing UIFont+RSCustom.h in the necessary file, you can assign a custom font to any font instance like this:
 
      self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
 
