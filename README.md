@@ -20,6 +20,34 @@ Usage
 #### Adding Custom Fonts
 #### Setting up Plist
 #### Code
+'''
+self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
+'''
+
+Additionally, you can listen for UIContentSizeCategoryDidChangeNotification in case the user changes the setting while using your app.
+
+in viewDidLoad/WillAppear/DidAppear add
+
+'''
+[[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(sizeChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+'''
+
+Then implement sizeChanged:
+'''
+-(void) sizeChanged:(id) sender {
+
+    self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
+    
+    // call invalidateIntrinsicContentSize if using Auto Layout
+    [self.labelBody invalidateIntrinsicContentSize];
+}
+'''
+
+
+
 
 ---------
 Feature Requests and Bug Fixes
@@ -35,3 +63,4 @@ iOS 8
 License
 ---------
 MIT License
+
