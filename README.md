@@ -25,7 +25,7 @@ Usage
 ---------
 
 #### Adding Custom Fonts
-Adding a Custom Font is a easy process but can be hard to diagnose if incorrectly attempted.
+Adding a Custom Font is a easy but an error can be hard to diagnose if done incorrectly.
 ##### Add Fonts to Target
 
 Drag your font file to the project and make sure you add the font to the target
@@ -34,7 +34,7 @@ Drag your font file to the project and make sure you add the font to the target
 ##### Add Fonts to info.plist
 ###### Open up your App's info.plist
 ###### Add a new Array entry called "Fonts provided by Application"
-###### Add each custom font file to this entry
+###### Add each custom font filename to the array
 ![Alt text](/images/Info_plist.png)
 
 
