@@ -18,7 +18,12 @@ Usage
 ---------
 
 #### Adding Custom Fonts
-#### Setting up Plist
+#### Setting up pList
+
+To define which fonts you to use for which category you can specify them in the pList called customFonts
+
+![Alt text](plist.png)
+
 #### Code
 
     self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
