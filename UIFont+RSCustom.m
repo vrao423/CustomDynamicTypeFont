@@ -32,10 +32,6 @@
     return [[[UIFont fontCache] objectForKey:contentSize] objectForKey:textStyle];
 }
 
-+(NSString *) customFontFaceForTextStyle:(NSString *) textStyle {
-    return self.contentProperties[textStyle][@"Font Face"];
-}
-
 +(NSDictionary *) contentProperties {
 
     static NSDictionary *contentProperties;
