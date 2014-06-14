@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-
+#import "UIFont+RSCustom.h"
 @interface CustomFontTesterTests : XCTestCase
 
 @end
@@ -26,9 +26,12 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testFontCreation
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    XCTAssertNotNil(font, @"font creation failed");
 }
+
+
 
 @end
