@@ -11,11 +11,13 @@
 @interface UIFont (RSCustom)
 
 /**
- Use this to set font
  
- @params textStyle Pass in 
+ Use this to get the custom font specified in customFont.plist.
  
- @return UIFont  
+ @params textStyle represents a particular text style for the font. See UIFontDescriptor.h for all text Styles
+ 
+ @return UIFont returns a custom font with the font face specified in plist.
+ 
  */
 +(UIFont *) customFontForTextStyle:(NSString *)textStyle;
 
