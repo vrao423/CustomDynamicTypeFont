@@ -35,13 +35,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    // check fonts is property installed
     UIFontDescriptor *robotoDescriptor = [UIFontDescriptor fontDescriptorWithFontAttributes:@{UIFontDescriptorFamilyAttribute:@"Roboto"}];
     NSArray *matches = [robotoDescriptor matchingFontDescriptorsWithMandatoryKeys:nil];
     NSLog(@"matches: %@", matches);
 
     [self sizeChanged:nil];
-
-
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(sizeChanged:)
@@ -53,11 +52,11 @@
 -(void) sizeChanged:(id) sender {
 
     self.labelBody.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
-    self.labelCaption1.font = [UIFont customFontForTextStyle:UIFontTextStyleCaption1];
+    self.labelCaption1.font = [UIFont customFontForTextStyle:UIFontTextStyleBody];
     self.labelCaption2.font = [UIFont customFontForTextStyle:UIFontTextStyleCaption2];
-    self.labelFootnote.font = [UIFont customFontForTextStyle:UIFontTextStyleFootnote];
+    self.labelFootnote.font = [UIFont customFontForTextStyle:UIFontTextStyleCaption2];
     self.labelHeadline.font = [UIFont customFontForTextStyle:UIFontTextStyleHeadline];
-    self.labelSubhead.font = [UIFont customFontForTextStyle:UIFontTextStyleSubheadline];
+    self.labelSubhead.font = [UIFont customFontForTextStyle:UIFontTextStyleHeadline];
 
     [self.labelBody invalidateIntrinsicContentSize];
     [self.labelCaption1 invalidateIntrinsicContentSize];
@@ -74,15 +73,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-*/
+
 
 @end

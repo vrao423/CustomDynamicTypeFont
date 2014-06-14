@@ -1,4 +1,4 @@
-Custom Font for iOS Dynamic Type 
+Custom Fonts with Dynamic Type 
 =====================
 
 One of the major shortcommings of Dynamic Type in iOS is the inability to use custom fonts. 

@@ -14,18 +14,19 @@
 
     NSString * contentSize = [[UIApplication sharedApplication] preferredContentSizeCategory];
 
-    if (![[UIFont fontCache]objectForKey:contentSize]) {
-        [[UIFont fontCache] setObject:[[NSCache alloc] init] forKey:contentSize];
+    if (![[UIFont fontCache] objectForKey:contentSize]) {
+        [[UIFont fontCache] setObject:[[NSMutableDictionary alloc] init] forKey:contentSize];
     }
 
     if(![[[UIFont fontCache] objectForKey:contentSize] objectForKey:textStyle]) {
-        NSString * contentSize = [[UIApplication sharedApplication] preferredContentSizeCategory];
 
         UIFont *preferred = [UIFont preferredFontForTextStyle:textStyle];
 
-        UIFontDescriptor * description = [UIFontDescriptor fontDescriptorWithName:[UIFont customFontFaceForTextStyle:textStyle] size:preferred.pointSize];
+        UIFontDescriptor * description = [UIFontDescriptor fontDescriptorWithName:[UIFont customFontFaceForTextStyle:textStyle]
+                                                                             size:preferred.pointSize];
 
-        [[[UIFont fontCache] objectForKey:contentSize] setObject:[UIFont fontWithDescriptor:description size:preferred.pointSize] forKey:textStyle];
+        [[[UIFont fontCache] objectForKey:contentSize] setObject:[UIFont fontWithDescriptor:description size:preferred.pointSize]
+                                                          forKey:textStyle];
     }
 
     return [[[UIFont fontCache] objectForKey:contentSize] objectForKey:textStyle];
