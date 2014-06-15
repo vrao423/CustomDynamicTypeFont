@@ -3,7 +3,7 @@ Custom Fonts with Dynamic Type
 
 One of the major shortcommings of Dynamic Type in iOS is the inability to use custom fonts. 
 
-To implement custom dynamic type for a project I wrote this code. 
+To implement custom dynamic type fonts for a project I wrote a category on UIFont. 
 
 The app that currently uses this code in the store is availible here: www.appstore.com/QEDC.
 
@@ -18,8 +18,7 @@ Installation
 #### Cocoapods
 #### Git Submodule
 #### Manual
- Clone this repository and drag UIFont+RSCustom.h/.m and customFont.plist to your project.
-
+ Clone this repository and drag UIFont+RSCustom{.h/.m} and customFont.plist to your project.
 
 Usage
 ---------
@@ -76,7 +75,7 @@ Please open an issue for bugs and feature requests. I would prefer to to have a 
 
 iOS 8 and XCode 6
 --
-I will be watching out for updates to XCode 6 and Interface Builder to render the fonts at the right time.
+I will be watching out for updates to XCode 6 and Interface Builder to render the fonts at design time.
 
 
 License
